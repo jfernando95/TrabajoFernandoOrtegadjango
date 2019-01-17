@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.encabezado{
+    position:relative;
+    display: inline-block;
+}
+#imagen_tit{
+    display: flex;
+    justify-content: center;
+}
+#imagen_tit img{
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+#titulo{
+    position: absolute;
+    z-index: 3000; 
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color:chartreuse;
+    margin-top: 130px;
+    letter-spacing: 0.2em;
+    font-style: oblique;
+}
+#subtitulo{
+    position: absolute;
+    z-index: 3000; 
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color:#3e8f3e;
+    margin-top: 130px;
+    letter-spacing: 0.2em;
+    font-style: oblique;
+}
+#imagensub{
+    float: left;
+    margin-right: 20px;/*margen de texto para q salga separado de la imagen*/
+}
+
+
+
+
+
+
+
+
+
+/*//////////////////////////*/
+.credits {
+    font-size: 12px;
+    text-align: center;
+    color: grey;
+    margin-top: 20px;
+    font-family: arial;
+    border-top: white 1px solid;
+    width: 80%;
+    padding-top: 20px;
+}
+
+.foot-sect {
+    width: 100%;
+    margin-top: 30px;
+    white-space: nowrap;
+}
+
+.foot-sect-current {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-top: 30px;
+    width: 100%;
+    white-space: nowrap;
+    border-left: double #a9a9a9 4px;
+    padding-bottom: 5px;
+}
+
+.foot-sect-current > .foot-link {
+    color: white;
+    border-bottom: solid 1px white;
+    display: block;
+    padding: 12px;
+    font-size: 14px;
+}
+.foot-sect-current > .foot-link:hover {
+    color: blue;
+    text-decoration: none;
+    border-bottom: none;
+}
+.foot-link {
+    color: grey;
+    text-decoration: none;
+    margin-right: 2px;
+    margin-left: 8px;
+    border-bottom: blue 1px solid;
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.foot-link:hover {
+    background-color: #efefef;
+    text-decoration: none;
+    color: black;
+}
+.foot-link-current {
+    color: #efefef;
+    text-decoration: none;
+    margin-right: 2px;
+    margin-left: 8px;
+    border-bottom: #ED2939 1px solid;
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+}
+.foot-link-current:hover {
+    color: #efefef;
+    text-decoration: none;
+}
+.foot-link-current:active {
+    color: #efefef;
+    text-decoration: none;
+}
+.foot-subt {
+    font-weight: 600;
+    color: #efefef;
+    margin-left: 3px;
+}
+.foot-subt-current {
+    font-weight: 600;
+    color: red;
+}
+footer {
+    width: 100%;
+    background-color: #111111;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 30px;
+    right: 0;
+    z-index: 1 !important;
+    margin-top: 10px;
+    position: relative;
+}

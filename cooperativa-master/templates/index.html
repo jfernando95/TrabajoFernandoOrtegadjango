@@ -1,0 +1,256 @@
+{% load staticfiles i18n %}
+<!DOCTYPE html>
+<br>
+    <head>
+        <title>{{title}}</title>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta charset="utf-8">
+        <!--Import materialize.css-->
+        {% load staticfiles %}
+        <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/materialize.min.css' %}"  media="screen,projection"/>
+        <link rel="icon" type="image/png" href="{% static '/img/avatar-3774.jpg' %}" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        {% block css %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/creative.min.css' %}" rel="stylesheet">
+    {% endblock %}
+    <style>
+        /*
+Inspired by http://dribbble.com/shots/890759-Ui-Kit-Metro/attachments/97174
+*/
+*, *:before, *:after {
+  /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+  -webkit-box-sizing: border-box;
+
+  /* Firefox (desktop or Android) 28- */
+  -moz-box-sizing: border-box;
+
+  /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+  box-sizing: border-box;
+}
+body {
+    background: url(http://habrastorage.org/files/90a/010/3e8/90a0103e8ec749c4843ffdd8697b10e2.jpg);
+    text-align: center;
+    padding-top: 40px;
+}
+.btn-nav {
+    background-color: #fff;
+    border: 1px solid #e0e1db;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.btn-nav:hover {
+    color: #e92d00;
+    cursor: pointer;
+    -webkit-transition: color 1s; /* For Safari 3.1 to 6.0 */
+    transition: color 1s;
+}
+.btn-nav.active {
+    color: #e92d00;
+    padding: 2px;
+	border-top: 6px solid #e92d00;
+	border-bottom: 6px solid #e92d00;
+    border-left: 0;
+    border-right: 0;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -webkit-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+    -moz-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+    -ms-transition: border 0.3s ease-out, color 0.3s ease 0.5s; /* IE10 is actually unprefixed */
+    -o-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+    transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+.btn-nav.active:before {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 6px 6px 0;
+	border-color: #e92d00 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	margin-left: -6px;
+	top: 0;
+	left: 50%;
+}
+.btn-nav .glyphicon {
+    padding-top: 16px;
+	font-size: 40px;
+}
+.btn-nav.active p {
+    margin-bottom: 8px;
+}
+@-webkit-keyframes pulsate {
+ 50% { color: #000; }
+}
+@keyframes pulsate {
+ 50% { color: #000; }
+}
+@media (max-width: 480px) {
+    .btn-group {
+        display: block !important;
+        float: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+@media (max-width: 600px) {
+    .btn-nav .glyphicon {
+        padding-top: 12px;
+        font-size: 26px;
+    }
+}
+    </style>
+    </head>
+</br>
+    <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">COOPERATIVA DE AHORRO</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/clientes/">CLIENTES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/clientes/cuentas">CUENTAS</a>
+            </li>
+
+            <li class="nav-item">
+                {% if user.is_authenticated %}
+              <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">SALIR</a>
+          {% endif %}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>COOPERATIVA DEL AHORRO</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">Realiza tu Pago o  Transacción Inmediatamente. Nuestra Prioridad es Usted!</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about"><footer>{% if user.is_authenticated %}
+            BIENVENIDO: {{user.username}}
+            {% endif %}</footer></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="/clientes/">Clientes</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="/logout/">Salir</a></li>
+            {% endif %}
+        </ul>
+        <section class="container">
+            {% block body %}{% endblock %}
+        </section>
+        <footer>{% if user.is_authenticated %}
+            Ha Ingresado como: {{user.username}}
+            {% endif %}</footer>
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="{% static 'materialize/js/materialize.min.js' %}"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, {});
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                {% for msg in messages %}
+                M.toast({html: '{{msg.message}}', classes: 'rounded'});
+                 {% endfor %}
+                 });
+        </script>
+        {% block js %}{% endblock %}
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Nuestro Servicio esta a su disposición</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">Es una asociación autónoma de personas que se han unido voluntariamente para hacer frente a sus necesidades y aspiraciones económicas, sociales y culturales comunes por medio de una empresa de propiedad conjunta y democráticamente controlada.</p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="">COOPERATIVA DEL AHORRO</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Atenderte es Nuestra Prioridad!!</h2>
+            <hr class="my-4">
+            <p class="mb-5">Tu ahorro esta en nuestras manos.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
+            <p>0979930876</p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
+            <p>
+              <a href="mailto:your-email@your-domain.com">fernando.ortega31995@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+
+    </body>
+</html>

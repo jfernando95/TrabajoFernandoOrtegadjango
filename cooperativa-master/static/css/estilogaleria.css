@@ -1,0 +1,53 @@
+#titulos	{
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+hr{
+    border: 2px solid khaki;
+    height: 3px;
+    background-color: darkkhaki;
+}
+
+
+#central {
+    width: 100%;
+    float: left;
+}
+
+.imagenes_lista	{
+    list-style-type: none;    
+    float:right; /*posicionamiento*/
+    margin-right: 30px;
+    padding: 0; 
+}
+
+li .min	{
+    width: 150px;
+    height: 150px;
+    padding: 6px 20px 20px 7px;
+}
+
+
+.max{
+    visibility: hidden; /*oculta los elementos*/
+    /*fixed= fija 100pr en el mismo lugar, rlative=en  relacion con su pos normal*/
+    position: absolute; /*la posicion sera de acuerdo al antercesor, caso contrario se mueve con la pag*/
+    top: 450px;	/* Provoca la separacion del borde superior */
+    right: 50%;	/* Separa la imagen grande de la pequea */
+    margin-left: 5px;
+}
+
+a:hover .max	{
+    visibility: visible;/*muestra los elementos*/
+}
+
+#img_grande{
+    width: 405px;
+    height: 305px;
+    position: absolute;
+    top: 450px;	/* Provoca la separacion del borde superior */
+    right: 50%;	/* Separa la imagen grande de la pequea */
+    background: url(img/galeria.png);
+}
